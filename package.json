@@ -1,0 +1,51 @@
+{
+  "name": "painel-diagnostico-urgencias-go",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Painel do Diagnóstico Situacional da Rede de Atenção às Urgências do Estado de Goiás",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "build:demo": "vite build --config vite.demo.config.ts --mode demo",
+    "lint": "eslint . --ext ts,tsx",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "importar-planilha": "python3 scripts/gerar-dicionario.py"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.26.2",
+    "recharts": "^2.12.7"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^2.8.2",
+    "@types/geojson": "^7946.0.14",
+    "@types/leaflet": "^1.9.12",
+    "@types/node": "^22.7.4",
+    "@types/papaparse": "^5.3.14",
+    "@types/react": "^18.3.9",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "vite-plugin-singlefile": "^2.3.3",
+    "vitest": "^2.1.1"
+  }
+}

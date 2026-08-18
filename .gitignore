@@ -1,0 +1,21 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+.netlify/
+*.tsbuildinfo
+
+# Ambiente
+.env
+.env.local
+
+# Editor / SO
+.DS_Store
+*.log
+.vscode/*
+!.vscode/extensions.json
+
+# Testes
+coverage/
+dist-demo/

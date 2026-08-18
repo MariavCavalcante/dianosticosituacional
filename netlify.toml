@@ -1,0 +1,30 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/dados"
+  to = "/.netlify/functions/dados"
+  status = 200
+
+[[redirects]]
+  from = "/api/revalidar"
+  to = "/.netlify/functions/revalidar"
+  status = 200
+
+# SPA fallback — todas as rotas do painel são renderizadas pelo React Router.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
